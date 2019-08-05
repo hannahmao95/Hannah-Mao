@@ -1,0 +1,162 @@
+ [
+ 	{
+		"id": "1",
+		"term": "term 1",
+		"definition": "definition 1"
+	}, 
+
+	{
+		"id": "2",
+		"term": "term 2",
+		"definition": "definition 2"
+	}, 
+
+	{
+		"id": "3",
+		"term": "term 3",
+		"definition": "definition 3"
+	},
+
+	{
+		"id": "4",
+		"term": "term 4",
+		"definition": "definition 4"
+	},
+
+	{
+		"id": "5",
+		"term": "term 5",
+		"definition": "definition 5"
+	},
+
+	{
+		"id": "6",
+		"term": "term 6",
+		"definition": "definition 6"
+	},
+
+	{
+		"id": "7",
+		"term": "term 7",
+		"definition": "definition 7"
+	},
+
+	{
+		"id": "8",
+		"term": "term 8",
+		"definition": "definition 8"
+	},
+
+
+	{
+		"id": "9",
+		"term": "term 9",
+		"definition": "definition 9"
+	},
+
+
+	{
+		"id": "10",
+		"term": "term 10",
+		"definition": "definition 10"
+	},
+
+	{
+		"id": "11",
+		"term": "term 11",
+		"definition": "definition 11"
+	},
+
+
+	{
+		"id": "12",
+		"term": "term 12",
+		"definition": "definition 12"
+	},
+
+
+	{
+		"id": "13",
+		"term": "term 13",
+		"definition": "definition 13"
+	},
+
+	{
+		"id": "14",
+		"term": "term 14",
+		"definition": "definition 14"
+	},
+
+
+	{
+		"id": "15",
+		"term": "term 15",
+		"definition": "definition 15"
+	},
+
+
+	{
+		"id": "16",
+		"term": "term 16",
+		"definition": "definition 16"
+	},
+
+	{
+		"id": "17",
+		"term": "term 17",
+		"definition": "definition 17"
+	},
+
+
+	{
+		"id": "18",
+		"term": "term 18",
+		"definition": "definition 18"
+	},
+
+
+	{
+		"id": "19",
+		"term": "term 19",
+		"definition": "definition 19"
+	},
+
+	{
+		"id": "20",
+		"term": "term 20",
+		"definition": "definition 20"
+	},
+
+
+	{
+		"id": "21",
+		"term": "term 21",
+		"definition": "definition 21"
+	},
+
+	{
+		"id": "22",
+		"term": "term 22",
+		"definition": "definition 22"
+	},
+
+	{
+		"id": "23",
+		"term": "term 23",
+		"definition": "definition 23"
+	},
+
+
+	{
+		"id": "24",
+		"term": "term 24",
+		"definition": "definition 24"
+	},
+
+	{
+		"id": "25",
+		"term": "term 25",
+		"definition": "definition 25"
+	}
+
+]

@@ -76,17 +76,6 @@ public class Main implements ActionListener, ItemListener {
 		  }
 		 
 		  clientlist = new JList(clients); 
-//		  clientlist.setCellRenderer(new DefaultListCellRenderer() { //print out object strings
-//	            @Override
-//	            public Component getListCellRendererComponent(JList<?> list, Object value, int index, boolean isSelected, boolean cellHasFocus) {
-//	                Component renderer = super.getListCellRendererComponent(list, value, index, isSelected, cellHasFocus);
-//	                if (renderer instanceof JLabel && value instanceof Client) {
-//	                   
-//	                    ((JLabel) renderer).setText(((Client) value).getFullname());
-//	                }
-//	                return renderer;
-//	            }
-//	        });
 		  
 	      JScrollPane scrollpanel =new JScrollPane(clientlist);
 	      
