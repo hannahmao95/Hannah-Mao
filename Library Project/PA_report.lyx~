@@ -1,0 +1,487 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Programming Assignment 3
+\end_layout
+
+\begin_layout Author
+Runhan Mao CSCE 221 section-201
+\end_layout
+
+\begin_layout Date
+07/28/16
+\end_layout
+
+\begin_layout Section*
+Program Description
+\end_layout
+
+\begin_layout Standard
+Part 1 of this assignment requires implementing a simple Doubly Linked List,
+ a Doubly Linked List, and a template Doubly Linked List.
+ Part 2 of the assignment requires the students to use the template Doubly
+ Linked List from part 1 and write a library management system that store
+ books.
+ Each book stores the following information: book title, author's name,
+ 13-digit ISBN, publishing year, and edition number.
+ The students will design a nice interface where the user can start searching
+ for a book by inputing the title of the book.
+ If the book is found, the library will simply display the book.
+ If the book is not found, the user will be ask to input information about
+ the book and add it to the library.
+ If more than one book has the same title and author, the user will be prompted
+ to input the specific edition to extract the book.
+ The program will display the book requested by the user.
+\end_layout
+
+\begin_layout Section*
+Purpose of the Assignment
+\end_layout
+
+\begin_layout Standard
+Part one of this assignment is to let students learn how to write data structue
+ and implementations for DoublyLinkedList class, SimpleDoublyLinkedList
+ class, and to convert the DoublyLinkedList class into templateDoublyLinkedList
+ class.
+ Later on, for part two of the assignment, the students are required to
+ learn how to implement DoublyLinkedList class in a real world problem,
+ in this case, implementing a library management system.
+\end_layout
+
+\begin_layout Section*
+Data Structures Description
+\end_layout
+
+\begin_layout Standard
+By doing this assignment, I learned about Doubly Linked List, its data structure
+ and its implementation.
+ Doubly Linked List has nodes that store two pointers, a pointer points
+ to previous and a pointer points to next.
+ It also has two sentinel nodes called header and trailer that do not store
+ any element.
+ Doubly Linked List has several functions, such as insertFirst(), insertLast(),
+ removeFirst(), removeLast(), getFirst(), getAfterLast(), isEmpty(), int
+ First(), and int Last().
+ In addtion, it has constructor, copy constructor, copy assignment, and
+ destructor.
+ I also learned how to implement 4 major functions: insert_before, insert_after,
+ delete_before and delete_after for SimpleDoublyLinkedList.
+ For part two of the assignment, several functions are required for the
+ Record class, overloading of the input operator to read in the records,
+ overloading the output operator to print out the records, and overloading
+ the comparison operator to compare items in the Record.
+ In order to implement the library management systems, several functions
+ are written.
+ Void read() function reads from the file and store the information inside
+ a vector consists of 26 books.
+ Each element of the vector is a doubly linked list, and each node of the
+ doubly linked list stores a record.
+ Void showLibrary() displays the books in the library.
+ Void addToLibrary() adds the book to the library if the book does not already
+ exit in the library.
+ Void Search() function search for user request and display the found book.
+ Finally, void userinterface() ask the user to input the title of the book.
+ It will ask if the user want to keep searching for another book, and it
+ will terminates the probram if the user says no.
+ 
+\end_layout
+
+\begin_layout Section*
+Algorithm Description
+\end_layout
+
+\begin_layout Standard
+In part 1, for SimpleDoublyLinkedlist, we are required to implement 4 functions:
+ insert_before, insert_after, delete_before, and delete_after.
+ For insert_before function, a new node is allocated dynamically, and it
+ is inserted before the 
+\begin_inset Quotes eld
+\end_inset
+
+this
+\begin_inset Quotes erd
+\end_inset
+
+ node, which is the node that you want to insert in front of.
+ NewNode is initialized with element d, and its previous pointer points
+ to previous, and its next pointer points to this.
+ It takes constant time to insert a new node, so its running time is O(1).
+ Its specifc running time function is shown in the code, please refer to
+ the code for running time function.
+ Insert_after is very similar to insert_before.
+ Everytime a function is called, a new node is allocated dynamically.
+ The new node's element is intialized with element d, its previous pointer
+ points to this, and its next pointer points to next.
+ It takes constant time to insert, so its complexity is O(1) as well.
+ delete_before function assign a temporary node called temp before the 
+\begin_inset Quotes eld
+\end_inset
+
+this
+\begin_inset Quotes erd
+\end_inset
+
+ node.
+ Its running time is O(1).
+ delete_after assigns a temporary node called temp after the 
+\begin_inset Quotes eld
+\end_inset
+
+this
+\begin_inset Quotes erd
+\end_inset
+
+ node.
+ Its running time is also O(1).
+ I drew four pictures to illustrate the implementations for these 4 functions,
+ it's more clearer than describing in words.
+ For DoublyLinkedList,we are required to write 3 functions: copy constructor,
+ copy assignment, and overloading ostream operator.
+ copy constructor always initializes first in case of an empty linked list.
+ It dynamically allocates a pointer that first points to dll.getFirst(),
+ and then it iterates throught the entire linked list and copy each element
+ until it gets to dll.getAfterLast().
+ Each iteration is incremented by newNode-getNext().
+ Copy constructor creates and initializes an object on the spot.
+ The running time for copy constructor is O(n), since it copies n elements.
+ Copy assignment utilizes the same algorithm, the difference is that it
+ first delete the pre-initiazlied linked list pointed by 
+\begin_inset Quotes eld
+\end_inset
+
+this
+\begin_inset Quotes erd
+\end_inset
+
+, then it copies from the another linked list, and finally it returns the
+ 
+\begin_inset Quotes eld
+\end_inset
+
+this
+\begin_inset Quotes erd
+\end_inset
+
+ pointer.
+ It takes O(n) times to copy each item.
+ Ostream operator works in a similar way, it goes through the while loop
+ so it can output each node of an linked list.
+ To copy an entire linked list with n nodes, it needs to iterates n times,
+ so its running time is O(n).
+ For part two, inside Record.h, we have to overload the input operator to
+ read an entire record with 5 items: title, name of the author, ISBN, year,
+ and edtion.
+ The function getline is used to read in empty space.
+ set functions are use to set the variables read from the file.
+ The running time is O(1), because it takes constant time to read 1 object
+ with 5 items each time.
+ The output operator prints out an entire record with the 5 items.
+ It also takes constant time to print 1 record, so its running time is O(1).
+ Finally, the less than operator compares title, author, and ISBN.
+ It will first compare titles.
+ If titles are the same, it will compare authors, and if both titles and
+ authors are the same, it will compare ISBN.
+ It does three comparisons in the worst case, so its running time is constant,
+ O(1).
+ The insertOrderly function inserts a record before the node that it is
+ being compared, if the record is smaller.
+ If the record is greater than all the other records in the list, it will
+ be placed at the end of the linked list and pointed by trailer.
+ It will take n comparisons in the worst case, so its running time is O(n).
+ To search for an item, the funciton takes O(n) times in the worst case,
+ and O(1) in the best case.
+\begin_inset VSpace vfill
+\end_inset
+
+
+\begin_inset Graphics
+	filename FullSizeRender.jpg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Program Organization and Description of Classes
+\end_layout
+
+\begin_layout Standard
+In part one, there are DoublyLinkedList class, SimpleDoublyLinkedList class,
+ and TemplateDoublyLinkedList class.
+ There is no relation between the DoublyLinkedList class and SimpleDoublyLinkedL
+ist class.
+ However, DoublyLinkedList class is used to convert to TemplateDoublyLinked
+ class.
+ Part two requires the Record class, the STL vector class and the TemplateDoubly
+LinkedList class.
+ The vector class is provided by the standard library.
+ Each vector element is a type DoublyLinkedList and each DoublyLinkedList
+ is a type Record.
+ The reason to use TemplateDoublyLinkedList class instead of just DoublyLinkedLi
+st class is that the DoublyLinkedList class must be generic so it can hold
+ data of different types.
+ In this case, it holds the type Record.
+\end_layout
+
+\begin_layout Section*
+Instructions to Compile and Run your Program
+\end_layout
+
+\begin_layout Standard
+For better Organization, I have four folders.
+ One is called DoublyLinkedList, one is called SimpleDoublyLinkedList, one
+ is called TemplateDoublyLinkedList, and finally the last one is called
+ book, which consists of part two of this asssignment.
+ Go to each folder/directory separately, and compile.
+ Inside the folder DoublyLinkedList, compile main.cpp.
+ Inside SimpleDoublyLinkedList folder, compile SimpleDoublyLinkedList.cpp.
+ Inside TemplateDoublyLinkedList folder, compile TemplateMain.cpp.
+ Finally, inside the book folder, compile main.cpp.
+ To complile the program, use the linux machine command line g++ -std=c++11
+ *.cpp or make all.
+ To run the program, execute ./main.
+ Before executing ./main, make sure a makefile has already been created first.
+ 
+\end_layout
+
+\begin_layout Section*
+Input and Output Specifications
+\end_layout
+
+\begin_layout Standard
+There are no specific input specifications for part 1 of this assignment,
+ since there is no input requried for testing.
+ For part two, there are several specifications for user input in order
+ to run the program smoothly.
+ First, when user is requested to input the title of the book, the first
+ letter of the title has to be capital.
+ If user accidentally typed lowercase for the first letter of the title,
+ the program will throw an out of range error.
+ Second, the user should input the title exactly as shown in the library.
+ If the user mispelled or mistyped the title of the book, the program will
+ show book not found.
+ Therefore, it is strongly advised that the user type the book name exactly
+ as it is shown in the library.
+ After each run, the program will ask the user if he or she wants to keep
+ searching for another book.
+ The user simply needs to type 
+\begin_inset Quotes eld
+\end_inset
+
+yes
+\begin_inset Quotes erd
+\end_inset
+
+, if he or she wants to continue searching.
+ If the user wants to stop searching, he or she simply needs to type 
+\begin_inset Quotes eld
+\end_inset
+
+no
+\begin_inset Quotes erd
+\end_inset
+
+.
+ The program displays the entire library after the program terminates.
+ The program also displays the library after a book is added to the library,
+ in order to show that the book is indeed added to the library.
+ Lastly, the program will display the book requested by the user, if the
+ book is found.
+ 
+\end_layout
+
+\begin_layout Section*
+Logical Exceptions
+\end_layout
+
+\begin_layout Standard
+For Doubly Linked List class, there should be EmptyDLinkedList exceptions
+ thrown for the following member functions: int first(), int last(), int
+ removeFirst(), int removeLast().
+ when an Doubly Linked list is empty, it cannot return an object in the
+ first node or return an object in the last node.
+ It cannot remove the first object, and it cannot remove the last object.
+ Therefore, exceptions must be thrown under these conditions.
+\end_layout
+
+\begin_layout Section*
+C++ object oriented or generic programming features
+\end_layout
+
+\begin_layout Standard
+This assignment is object oriented because it requires writing implementations
+ for classes.
+ For part one, the students are required to write implementations for SimpleLink
+edList class and DoublyLinkedList class.
+ For part two, Record is also a class that holds 5 items, and students are
+ required to write overloading input operator, overloading output operator,
+ and overloading operator less than for the Record class.
+ The generic programming feature in this assignment is the templateDoublyLinkedL
+ist class, which is converted from DoublyLinkedList class.
+ By using templateDoublyLinkedList class, we are able to have the doubly
+ linked list to store elements with type Record.
+\end_layout
+
+\begin_layout Section*
+Tests
+\end_layout
+
+\begin_layout Standard
+Part one of the testing is demonstrated in class by simply runnining the
+ test files.
+ Part two of the testing requires user input.
+ There are three scenarios.
+ The first scenario is that the user search for a book already existing
+ in the library, the library will simply display the book that the user
+ searches for.
+ The second scenario occurs when the user searches for a book that is not
+ already in the library, in this case, the user is required to input information
+ about the book and the library will add the book to its database.
+ The program will display the library showing the added book.
+ The third scenario occurs when the user searches for a book, and more than
+ one book has the same author and title.
+ The library will first show the books that have the same titles, and the
+ library will ask the user which author.
+ After the user has chosen the author, the library will ask the user which
+ edition of the book.
+ After each search, the library prompts the user if he or she wants to keep
+ searching.
+ The user simply needs to type 
+\begin_inset Quotes eld
+\end_inset
+
+yes
+\begin_inset Quotes erd
+\end_inset
+
+ to continue searching, or 
+\begin_inset Quotes eld
+\end_inset
+
+no
+\begin_inset Quotes erd
+\end_inset
+
+ to terminate the program.
+ The above three scenarios are tested below.
+ Please see the results below.
+\begin_inset VSpace vfill
+\end_inset
+
+
+\begin_inset Graphics
+	filename Screen Shot 2016-07-28 at 9.29.46 PM.png
+	scale 60
+
+\end_inset
+
+
+\begin_inset VSpace vfill
+\end_inset
+
+
+\begin_inset Graphics
+	filename Screen Shot 2016-07-28 at 9.30.05 PM.png
+	scale 60
+
+\end_inset
+
+
+\begin_inset VSpace vfill
+\end_inset
+
+
+\begin_inset Graphics
+	filename Screen Shot 2016-07-28 at 9.31.37 PM.png
+	scale 60
+
+\end_inset
+
+
+\begin_inset VSpace vfill
+\end_inset
+
+
+\begin_inset Graphics
+	filename Screen Shot 2016-07-28 at 9.31.59 PM.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
