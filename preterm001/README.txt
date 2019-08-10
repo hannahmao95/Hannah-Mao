@@ -1,9 +1,1 @@
-In this version we've create a Client class which can hold the data for the user
-
-lastname
-firstname
-id
-
-From this, we need to build a way to keep a full set of data in an array of Client
-
-We will use a CSV file to do so.
+In this initial version of the project, I created an application that allows assigning the clients to a seating matrix. The clients are booked to vacant seats in a 10x10 matrix. The clients are randomly assigned to the matrix instead of manual assignment. Hence, there’s no user interaction in the first pass. 

@@ -9,9 +9,8 @@ public class Seat {
     private int id;
     int row;
     int col;
-    boolean canBeAssigned=true;
+   
 
-    
 	public Seat(String f, String l, int i, int r , int c) {
 		
 		firstname = f;
@@ -19,7 +18,6 @@ public class Seat {
 		id = i;	
 		row =r;
 		col= c;
-		//canBeAssigned=a;
 		
 	}
 	
@@ -49,10 +47,6 @@ public class Seat {
 			String ID = Integer.toString(id);
 			return ID;	
 		}			
-	}
-	
-	boolean getCanBeAssigned() {
-		return canBeAssigned;
 	}
 	
 	

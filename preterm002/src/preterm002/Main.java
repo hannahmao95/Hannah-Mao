@@ -1,7 +1,6 @@
 package preterm002;
 import java.awt.BorderLayout;
 import java.awt.Color;
-import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
@@ -11,12 +10,8 @@ import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
-import java.util.ArrayList;
 import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
 import java.util.Stack;
-import java.util.Vector;
 
 import javax.swing.*;
 
@@ -24,7 +19,6 @@ import javax.swing.*;
 public class Main implements ActionListener, ItemListener {
 	   private JFrame mainFrame;
 	   private JLabel headerLabel;
-	   private JLabel statusLabel;
 	   private JPanel controlPanel;
 	   DefaultListModel listModel;
 	   JList clientlist;
@@ -43,7 +37,7 @@ public class Main implements ActionListener, ItemListener {
 	   Stack<Client> clientstack= new Stack<Client>();
 	   DefaultListModel<Client> clients= new DefaultListModel<Client>(); //list of clients assigned to JList
 	   LinkedList<Seat> seatlist= new LinkedList<Seat>(); //contains the assigned seats 
-	   LinkedList<Client> clientscopy= new LinkedList<Client>(); //client list for comparison purposes
+	   LinkedList<Client> clientscopy= new LinkedList<Client>(); //a copy of list of clients for comparison purposes
 	 
 	   public Main() {
 	      prepareGUI();
@@ -76,7 +70,7 @@ public class Main implements ActionListener, ItemListener {
 		  }
 		 
 		  clientlist = new JList(clients); 
-		  
+
 	      JScrollPane scrollpanel =new JScrollPane(clientlist);
 	      
 	      scrollpanel.setPreferredSize(new Dimension(200,300));;
@@ -144,8 +138,7 @@ public class Main implements ActionListener, ItemListener {
 	    		  panelbutton.add(buttons[i][j]);
 	    		  panelbutton.setBackground(Color.PINK);
 	    		  
-	    		  panel.add(panelbutton);
-	    		 	    
+	    		  panel.add(panelbutton); 	    
 	    	  }   
 	        }
 	      
@@ -197,12 +190,12 @@ public class Main implements ActionListener, ItemListener {
 						
 							String clientele=clientscopy.get(i).getInitialIDString(); 
 						
-						    //return client back to JList set seats back to vacant
-							if(selected.equals(clientele)) { //find the selected initial/id in the list of clients
+						    //return client back to JList, set seats back to vacant
+							if(selected.equals(clientele)) { //find the selected initial/ID in the list of clients
 						
-								Client obj= clientscopy.get(i);
+								Client obj= clientscopy.get(i);   //add the client back to the top of JList
 								clients.add(0,obj); 
-								labels[clickedindexr][clickedindexc].setText("vacant");
+								labels[clickedindexr][clickedindexc].setText("vacant"); //set the seat to vacant
 								
 			
 							}	
@@ -212,11 +205,10 @@ public class Main implements ActionListener, ItemListener {
 						
 							String seatele= seatlist.get(i).getInitialIDString();
 					
-								if(selected.equals(seatele)) { //find the selected intial/id in the list of seats	
+								if(selected.equals(seatele)) { //find the selected initial/ID in the list of seats	
 									
 									seatlist.remove(i);
 									
-								
 								}			
 						}		
 		    	  	}
@@ -246,7 +238,11 @@ public class Main implements ActionListener, ItemListener {
 			   }
 			      //print the currently assigned seats in the console
 			   if (ae.getActionCommand().equals("Print List of Assigned Clients in Console")) { 
-				      
+				  
+				   	System.out.print("\033[H\033[2J");  //clear console
+				   	System.out.flush();
+				
+				   
 				   	 System.out.println("- display list of clients with seat assignment\n");
 					
 					 System.out.printf( "%-30s %-30s %-30s\n","Client","ID","Seat");
