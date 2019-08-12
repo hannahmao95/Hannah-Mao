@@ -1,0 +1,1 @@
+In this project, I designed a nice user interface where user can search for a book by inputing the title of the book. If the book is found, the library will simply display the book. If the book is not found, the user will be asked to impugn information about the book and addition it to the library. 
