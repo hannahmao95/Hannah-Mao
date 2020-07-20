@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Interactive Quiz Game</title>
+		<link rel='stylesheet' href='quizApp.css' />  
+		<script src="quizApp.js"></script>
+		
+	</head>
+	<body>
+	<h1>Interactive Quiz Game</h1>
+
+	<div id="timer">00:00:00</div>
+	<input type='button' id="myState" nextstate="End" value="Play" onclick="startbutton()"></input>
+
+	<button onclick="undo()">Undo</button>
+	<button onclick="showScore()">Show Score</button>
+	
+     <h1>Your Score is: <span id="myText" ></span></h1>
+
+	<div id="myData"></div>
+
+	
+	<div class= "container"> 
+
+	
+		<div class= "box1">
+
+			<div class="dragbox" >
+				<div class="terms" id="drag1" draggable="true" ondragstart="drag(event)" LinkId="0">Term1</div>
+			</div>
+
+			<div class="dragbox" >
+				<div class="terms" id="drag2" draggable="true" ondragstart="drag(event)" LinkId="0">Term2</div>
+			</div>
+
+			<div class="dragbox" >
+				<div class="terms" id="drag3" draggable="true" ondragstart="drag(event)" LinkId="0">Term3</div>
+			</div>
+
+			<div class="dragbox" >
+				<div class="terms" id="drag4" draggable="true" ondragstart="drag(event)" LinkId="0">Term4</div>
+			</div>
+
+			<div class="dragbox">
+				<div class="terms" id="drag5" draggable="true" ondragstart="drag(event)" LinkId="0">Term5</div>
+			</div>
+
+		</div>
+
+		
+        
+		<div class= "box2">
+		    
+			<div class="dropbox" id="drop1" ondrop="drop(event)" ondragover="allowDrop(event)"  droppedLinkId="0" >drop</div>
+			<div class="dropbox" id="drop2" ondrop="drop(event)" ondragover="allowDrop(event)"  droppedLinkId="0" >drop</div>
+			<div class="dropbox" id="drop3" ondrop="drop(event)" ondragover="allowDrop(event)"  droppedLinkId="0" >drop</div>
+			<div class="dropbox" id="drop4" ondrop="drop(event)" ondragover="allowDrop(event)"  droppedLinkId="0" >drop</div>
+			<div class="dropbox" id="drop5" ondrop="drop(event)" ondragover="allowDrop(event)"  droppedLinkId="0" >drop</div>
+
+		</div>
+
+
+     	<div class= "box3">
+		    
+			<div class="defbox" id="defb1" >def1</div>
+			<div class="defbox" id="defb2" >def2</div>
+			<div class="defbox" id="defb3" >def3</div>
+			<div class="defbox" id="defb4" >def4</div>
+			<div class="defbox" id="defb5" >def5</div>
+
+		</div>
+
+</div>
+	
+       
+	
+	</body>
+</html>

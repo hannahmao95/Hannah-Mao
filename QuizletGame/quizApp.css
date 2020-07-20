@@ -1,0 +1,76 @@
+ 
+.container{ 
+  display: flex;
+  align-items: : center;
+  background-color: pink;
+  width: 900px;
+  height:400px;
+}
+
+
+.box1 {
+
+  float:right;
+  background-color: Dodgerblue;
+  width: 300px;
+  margin: 10px;
+  line-height: 65px;
+  font-size: 30px;
+  border: 1px solid black;
+}
+
+
+.box2{
+
+  background-color: blue;
+  width: 300px;
+  margin: 10px;
+  text-align: center;
+  line-height: 65px;
+  font-size: 30px;
+  border: 1px solid black;
+  float:left;
+
+}
+
+
+.box3{
+
+  background-color: blue;
+  width: 300px;
+  margin: 10px;
+  line-height: 65px;
+  font-size: 30px;
+  border: 1px solid black;
+
+
+}
+
+
+.dragbox{
+
+        width: 200px;
+        height: 35px;
+        margin: 10px;
+        padding: 10px;
+        background-color: yellow;
+        
+}
+
+.dropbox,.defbox{
+        width: 200px;
+        height: 35px;
+        margin: 10px;
+        padding: 10px;
+        background-color: #f1f1f1;
+        
+}
+
+
+
+
+
+
+
+
+

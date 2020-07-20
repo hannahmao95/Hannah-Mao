@@ -1,0 +1,1 @@
+In this final version, I created an application that assign clients to a 10x10 matrix similar to booking the clients for a movie theatre. The GUI for this project is implemented using Java Swing. Clients are loaded from the csv file to a JList. Users can manually book and unbook the clients.
