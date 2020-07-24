@@ -12,11 +12,11 @@ Each line contains a single record with the following column, in order:
 -Brand of the ordered product
 
 Example:
-ID944806,Willard Vista,Intelligent Copper,3,Hilll-Gorczany
-ID644525,Roger Centers,Intelligent Copper,1,Kuze-Bernhard
-ID348204,Roger Centers,Small Granite Shoes,4,Rowe and Legros
-ID710139,Roger Centers,Intelligent Copper,4,Hilll-Gorczany
-ID426632,Roger Centers,Intelligent Copper,4,Hilll-Gorczany
+ID944806,Willard Vista,Intelligent Copper,3,Hilll-Gorczany<br />
+ID644525,Roger Centers,Intelligent Copper,1,Kuze-Bernhard<br />
+ID348204,Roger Centers,Small Granite Shoes,4,Rowe and Legros<br />
+ID710139,Roger Centers,Intelligent Copper,4,Hilll-Gorczany<br />
+ID426632,Roger Centers,Intelligent Copper,4,Hilll-Gorczany<br />
 
 Create two csv files named 0_input_file_name and 1_inputfile_name
 
