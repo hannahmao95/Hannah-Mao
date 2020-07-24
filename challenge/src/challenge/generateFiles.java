@@ -61,7 +61,7 @@ public class generateFiles {
 	            System.out.println(entry.getKey() + "," + Double.parseDouble(entry.getValue().toString())/count);  
 	                writer1.append(entry.getKey().toString());
 	                writer1.append(',');
-	                writer1.append(String.valueOf(Double.parseDouble(entry.getValue().toString())/4));
+	                writer1.append(String.valueOf(Double.parseDouble(entry.getValue().toString())/count));
 	                writer1.append('\n');
 	        }
 			writer1.flush();
