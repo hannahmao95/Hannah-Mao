@@ -11,7 +11,7 @@ Each line contains a single record with the following column, in order:
 -Quantity of the product delivered in that order
 -Brand of the ordered product
 
-Example:
+Example:<br />
 ID944806,Willard Vista,Intelligent Copper,3,Hilll-Gorczany<br />
 ID644525,Roger Centers,Intelligent Copper,1,Kuze-Bernhard<br />
 ID348204,Roger Centers,Small Granite Shoes,4,Rowe and Legros<br />
@@ -25,7 +25,7 @@ Create two csv files named 0_input_file_name and 1_inputfile_name
 1_input_file_name - In the first column, list the product Name. The second column should be most popular Brand for that product. Most popular is defined as he brand with the most total orders for the item, not the quantity purchased. 
 
 
-Sample Explanation:
+Sample Explanation:<br />
 ID944806,Willard Vista,Intelligent Copper,3,Hilll-Gorczany<br />
 ID644525,Roger Centers,Intelligent Copper,1,Kuze-Bernhard<br />
 ID348204,Roger Centers,Small Granite Shoes,4,Rowe and Legros<br />
