@@ -26,11 +26,11 @@ Create two csv files named 0_input_file_name and 1_inputfile_name
 
 
 Sample Explanation:
-ID944806,Willard Vista,Intelligent Copper,3,Hilll-Gorczany
-ID644525,Roger Centers,Intelligent Copper,1,Kuze-Bernhard
-ID348204,Roger Centers,Small Granite Shoes,4,Rowe and Legros
-ID710139,Roger Centers,Intelligent Copper,4,Hilll-Gorczany
-ID426632,Roger Centers,Intelligent Copper,4,Hilll-Gorczany
+ID944806,Willard Vista,Intelligent Copper,3,Hilll-Gorczany<br />
+ID644525,Roger Centers,Intelligent Copper,1,Kuze-Bernhard<br />
+ID348204,Roger Centers,Small Granite Shoes,4,Rowe and Legros<br />
+ID710139,Roger Centers,Intelligent Copper,4,Hilll-Gorczany<br />
+ID426632,Roger Centers,Intelligent Copper,4,Hilll-Gorczany<br />
 
 
 File 
@@ -40,9 +40,9 @@ There is 1 order for Small Granite Shoes totaling 4 items.
 
 There are 5 total orders, so the average per order is 12/5=2.4 for Intelligent Copper Knife, and 4/5=0.8 for Small Granite Shoes.
 
-0_input_example.csv:
-Intelligent Copper,2.4
-Small Granite Shoes,0.8
+0_input_example.csv:<br />
+Intelligent Copper,2.4<br />
+Small Granite Shoes,0.8<br />
 
 
 1_input_file_name is created based on:
@@ -51,11 +51,12 @@ Small Granite Shoes,0.8
 1 Branded Kunze-Bernhar
 -There is 1 order for Small Granite shoes made by Rowe and Legros.
 
-The most popular brand for Intelligent Copper Knife is Hill-Gorczany
-The most popular brand for Small Granite shoes is Rowe and Legros
+The most popular brand for Intelligent Copper Knife is Hill-Gorczany<br />
+The most popular brand for Small Granite shoes is Rowe and Legros<br />
 
-1_input_example.csv:
-Intelligent Copper	Hilll-GorczanySmall Granite Shoes	Rowe and Legros
+1_input_example.csv:<br />
+Intelligent Copper	Hilll-Gorczany<br />
+Small Granite Shoes	Rowe and Legros<br />
 
 
 
