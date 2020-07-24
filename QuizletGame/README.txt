@@ -1,2 +1,1 @@
-In this project, I designed an interactive quiz app that will have the drop and drag functionality and an interface that allows matching the correct definitions to terms. 
-In addition, the quiz has a timer that displays time elapsed for the duration of the game, and a show score button that displays the number of correct matches of definitions to terms.
+In this initial version of the project, I created an application that allows assigning the clients to a seating matrix. The clients are booked to vacant seats in a 10x10 matrix. The clients are randomly assigned to the matrix instead of manual assignment. Hence, there’s no user interaction in the first pass. 
