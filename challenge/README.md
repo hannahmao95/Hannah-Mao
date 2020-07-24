@@ -4,12 +4,12 @@ This little program process a csv file.
 
 There is a csv file that keeps a record of n order details for orders made at an online shopping website. The file has a .csv extension.
 
-Each line contains a single record with the following column, in order:
--Id of the order placed
--Area where the order was delivered
--Name of the product
--Quantity of the product delivered in that order
--Brand of the ordered product
+Each line contains a single record with the following column, in order:<br />
+-Id of the order placed<br />
+-Area where the order was delivered<br />
+-Name of the product<br />
+-Quantity of the product delivered in that order<br />
+-Brand of the ordered product<br />
 
 Example:<br />
 ID944806,Willard Vista,Intelligent Copper,3,Hilll-Gorczany<br />
@@ -34,9 +34,9 @@ ID426632,Roger Centers,Intelligent Copper,4,Hilll-Gorczany<br />
 
 
 File 
-0_input_file_name is created based on:
-There are 4 orders for Intelligent Copper Knife products that total 12 items.
-There is 1 order for Small Granite Shoes totaling 4 items.
+0_input_file_name is created based on:<br />
+There are 4 orders for Intelligent Copper Knife products that total 12 items.<br />
+There is 1 order for Small Granite Shoes totaling 4 items.<br />
 
 There are 5 total orders, so the average per order is 12/5=2.4 for Intelligent Copper Knife, and 4/5=0.8 for Small Granite Shoes.
 
@@ -45,11 +45,11 @@ Intelligent Copper,2.4<br />
 Small Granite Shoes,0.8<br />
 
 
-1_input_file_name is created based on:
--There are 4 orders for Intelligent Copper Knife,
-3 Branded Hill-Gorczany and
-1 Branded Kunze-Bernhar
--There is 1 order for Small Granite shoes made by Rowe and Legros.
+1_input_file_name is created based on:<br />
+-There are 4 orders for Intelligent Copper Knife,<br />
+3 Branded Hill-Gorczany and<br />
+1 Branded Kunze-Bernhar<br />
+-There is 1 order for Small Granite shoes made by Rowe and Legros.<br />
 
 The most popular brand for Intelligent Copper Knife is Hill-Gorczany<br />
 The most popular brand for Small Granite shoes is Rowe and Legros<br />
